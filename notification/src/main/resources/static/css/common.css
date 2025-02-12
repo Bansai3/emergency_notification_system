@@ -1,0 +1,23 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+footer, header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 15%;
+}
+
+main {
+    height: 70%;
+    width: 100%;
+}
+
+.operation_status {
+    color: green;
+    font-size: 20px;
+}

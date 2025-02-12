@@ -1,0 +1,30 @@
+<header th:fragment="header" xmlns:th="https://www.thymeleaf.org"
+        xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <div class="header_container">
+        <img th:src = "@{/images/logo.png}" alt = "Logo" class="logo_image">
+
+        <nav>
+            <ul class="main_section">
+                 <li><a href="/main_page" class="main_section_item">Home</a></li>
+                 <li><a href="/notification_page" class="main_section_item">Notifications</a></li>
+                 <li><a href="/notification_group_page" class="main_section_item">Contacts</a></li>
+                 <li><a href="/notifications/notification_groups" class="main_section_item">Groups</a></li>
+            </ul>
+
+            <ul class="auth_section">
+                 <li sec:authorize="isAuthenticated()"><div sec:authentication="name" class="user_name"></div></li>
+                 <li sec:authorize="isAuthenticated()">
+                     <form th:action="@{/logout}" method="post">
+                         <button type="submit" class="logout_link">Logout</button>
+                     </form>
+                 </li>
+
+                 <li sec:authorize="!isAuthenticated()"><a th:href="@{/login_page}" class="login_link">Login</a></li>
+                 <li sec:authorize="!isAuthenticated()"><a th:href="@{/registration_page}" class="register_link">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="line"></div>
+
+</header>

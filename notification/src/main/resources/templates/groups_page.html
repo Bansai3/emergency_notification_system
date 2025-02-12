@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/groups_page.css}">
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+</head>
+<body>
+
+<div th:replace="~{header :: header}"></div>
+
+<main>
+    <div class="groups_container">
+        <div class="groups_list_container">
+            <div class="groups_title">Your notification groups</div>
+            <div class="line"></div>
+            <div class="groups_list">
+                <div th:each="group, stat : ${groups}" class="group_item">
+                    <span th:text="${stat.index + 1}"></span>. <span th:text="${group.groupName()}"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div th:replace="~{footer :: footer}"></div>
+
+</body>
+</html>

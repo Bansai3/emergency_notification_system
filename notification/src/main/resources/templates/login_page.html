@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/login_page.css}">
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+</head>
+<body>
+
+<div th:replace="~{header :: header}"></div>
+
+    <form class="login_form" th:action="@{/login}" method="post">
+        <div class="login_form_container">
+            <div class="login_fields">
+                <div class="login_title">Login</div>
+                <input class="login_field" type="text" name="login" placeholder="login" required>
+                <input class="login_field" type="password" name="password" placeholder="password" required>
+                <button class="login_button" type="submit">Login</button>
+                <div th:if="${param.error}">
+                    <p style="color: red;">Invalid username or password</p>
+                </div>
+            </div>
+        </div>
+    </form>
+
+<div th:replace="~{footer :: footer}"></div>
+
+
+</body>
+</html>

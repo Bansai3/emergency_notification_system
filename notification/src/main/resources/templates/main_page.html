@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/main_page.css}">
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+</head>
+<body>
+
+<div th:replace="~{header :: header}"></div>
+
+<main>
+    <div class="description_container">
+        <div class="description">
+            <div class="main_idea">
+                <b>Emergency Notification System</b> – это приложение, предназначенное для быстрого и удобного распространения уведомлений, сообщений и файлов через электронную почту и SMS.
+                Система ориентирована на организации и предприятия, которым требуется экстренно информировать сотрудников, клиентов или группы людей.
+            </div>
+
+            <div class="functions">
+                <b>Основные функции:</b>
+                <ol>
+                    <li>Рассылка сообщений и файлов:
+                        <ul>
+                            <li>Отправка текстовых уведомлений на электронную почту и в виде SMS.</li>
+                            <li>Возможность прикрепления файлов к электронным письмам.</li>
+                        </ul>
+                    </li>
+                    <li>Поддержка загрузки контактов:
+                        <ul>
+                            <li>Импорт контактных данных из файлов форматов .csv и .xls.</li>
+                            <li>Автоматическая обработка загруженных файлов для формирования списков получателей.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div th:replace="~{footer :: footer}"></div>
+
+</body>
+</html>

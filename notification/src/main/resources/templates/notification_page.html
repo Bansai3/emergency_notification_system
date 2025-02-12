@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/notification_page.css}">
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/error_page.css}">
+</head>
+<body>
+
+<div th:replace="~{header :: header}"></div>
+
+<main>
+    <div class="notification_container">
+        <form class="notification_form" th:action="@{/notifications/notification}" method="post" enctype="multipart/form-data">
+            <div class="notification_form_title">Send notification</div>
+
+            <div class="contact_group_name">
+                <label class="notification_element" for="contact_group_name_field">Insert notification group name:</label>
+                <input id="contact_group_name_field" type="text" name="notificationGroupName" placeholder="Notification group name" required>
+            </div>
+
+            <div class="notification_text">
+                <label class="notification_element" for="notification_text_field">Insert notification text:</label>
+                <textarea id="notification_text_field" rows="5" cols="40" name="text" placeholder="Notification text" required></textarea>
+            </div>
+
+            <div class="notification_files">
+                <label class="notification_element" for="notification_files_field">Add notification files:</label>
+                <input id="notification_files_field" type="file" name="files" multiple>
+            </div>
+
+            <button class="send_notification_bottom" type="submit">Send notification</button>
+
+            <div class="errors_list" th:if="${errors}">
+                    <div th:each="error : ${errors}" th:text="${error.defaultMessage}"></div>
+            </div>
+
+            <div class="operation_status" th:if="${operation_status != null}">
+                <p th:text="${operation_status}"></p>
+            </div>
+
+        </form>
+    </div>
+</main>
+
+<div th:replace="~{footer :: footer}"></div>
+
+</body>
+</html>

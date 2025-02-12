@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/notification_group_page.css}">
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/error_page.css}">
+</head>
+<body>
+
+
+<div th:replace="~{header :: header}"></div>
+
+<main>
+    <div class="contact_container">
+        <form class="contact_form" th:action="@{/notifications/notification_group}" method="post" enctype="multipart/form-data">
+            <div class="contact_form_title">Load contacts</div>
+            <div class="contact_group_name">
+                <label class="contact_group_name_title" for="contact_file_value">Insert group name:</label>
+                <input id="contact_group_name_value" type="text" placeholder="group name" name="groupName" required>
+            </div>
+            <div class="contact_file">
+                <label class="contact_file_title" for="contact_file_value">Add contact files:</label>
+                <input id="contact_file_value" type="file" name="contacts_file" multiple>
+            </div>
+            <button class="upload_contacts_bottom" type="submit">Upload contacts</button>
+            <div class="errors_list" th:if="${errors}">
+                <div th:each="error : ${errors}" th:text="${error.defaultMessage}"></div>
+            </div>
+            <div class="operation_status" th:if="${operation_status != null}">
+                <p th:text="${operation_status}"></p>
+            </div>
+        </form>
+    </div>
+</main>
+
+
+<div th:replace="~{footer :: footer}"></div>
+
+</body>
+</html>

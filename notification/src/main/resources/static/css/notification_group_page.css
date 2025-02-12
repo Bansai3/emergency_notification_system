@@ -1,0 +1,81 @@
+.upload_contacts_bottom {
+    background-color: yellow;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+#contact_file_value {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 16px;
+    width: 50%;
+    height: 60%;
+}
+
+#contact_group_name_value {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 16px;
+    width: 50%;
+    height: 15%;
+}
+
+
+.contact_file_title, .contact_group_name_title {
+    font-size: 22px;
+    width: 50%;
+}
+
+
+.contact_file {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+}
+
+
+.contact_form_title {
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items:  center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    width: 40%;
+    height: 50%;
+}
+
+.contact_container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_group_name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+}

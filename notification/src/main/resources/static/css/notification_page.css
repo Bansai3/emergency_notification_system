@@ -1,0 +1,87 @@
+.notification_container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification_form {
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 40%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#contact_group_name_field, #notification_text_field, #notification_files_field, .send_notification_bottom {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+#contact_group_name_field {
+    height: 20%;
+    width: 50%;
+}
+
+#notification_files_field {
+    height: 70%;
+    width: 50%;
+}
+
+#contact_group_name_field {
+    font-size: 14px;
+}
+
+.notification_form_title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#notification_text_field {
+    font-size: 14px;
+    height: 70%;
+    width: 50%;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.send_notification_bottom {
+    background-color: yellow;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact_group_name, .notification_text, .notification_files {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+
+.contact_group_name {
+    height: 10%;
+}
+
+.notification_text {
+    height: 30%;
+}
+
+.notification_files {
+    height: 30%;
+}
+
+.notification_element {
+    font-size: 18px;
+}

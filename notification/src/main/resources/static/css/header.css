@@ -1,0 +1,77 @@
+.header_container {
+    width: 95%;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.logo_image {
+    height: 110px;
+    width: 15%;
+}
+
+nav {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_section, .auth_section {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_section {
+    width: 55%;
+}
+
+.auth_section {
+    width: 20%;
+}
+
+.main_section li {
+    font-size: 20px;
+    color: grey;
+}
+
+a {
+    text-decoration: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #DEDEDE;
+    margin: 20px 0;
+}
+
+.user_name {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logout_link {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.login_link, .register_link {
+    color: grey;
+    font-size: 20px;
+}
+
+.login_link:hover, .register_link:hover {
+    color: red;
+}
+
+.main_section_item {
+    color: black;
+    font-size: 22px;
+}

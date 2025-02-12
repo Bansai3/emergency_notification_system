@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error page</title>
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/error_page.css}">
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+</head>
+<body>
+
+<div th:replace="~{header :: header}"></div>
+
+<main>
+    <div class="error_container">
+        <div class="error_value" th:text="${error_message}"></div>
+    </div>
+
+</main>
+
+<div th:replace="~{footer :: footer}"></div>
+
+</body>
+</html>

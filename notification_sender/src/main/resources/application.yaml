@@ -1,0 +1,39 @@
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092,localhost:9094,localhost:9096
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        retry:
+          backoff:
+            ms: 1000
+        enable:
+          idempotence: true
+    consumer:
+      bootstrap-servers: localhost:9092,localhost:9094,localhost:9096
+      group-id: notification-created-events
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "*"
+  mail:
+   host: smtp.gmail.com
+   port: 587
+   username: <email value>
+   password: <email password>
+   properties:
+     mail:
+       smtp:
+         auth: true
+         starttls:
+           enable: true
+#       debug: true
+
+  application:
+   name: notification_sender
+
+server:
+  port: 5045
+

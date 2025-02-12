@@ -1,0 +1,9 @@
+FROM arm64v8/gradle:8.12-jdk17 AS build
+WORKDIR /build/
+COPY . /build/
+RUN ./gradlew build --no-daemon
+
+FROM openjdk:17-jdk-slim AS runtime
+ARG JAR_FILE=/build/notification/build/libs/*.jar
+COPY --from=build $JAR_FILE /opt/notification-app/app.jar
+ENTRYPOINT ["java", "-jar", "/opt/notification-app/app.jar"]
