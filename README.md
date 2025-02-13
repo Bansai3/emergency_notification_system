@@ -135,5 +135,5 @@ docker-compose up
 ## Technology Stack
 
 **Languages**: Java, CSS, HTML \
-**Frameworks**: Spring (Boot, Web, DataJpa, Thymeleaf), Kafka \
+**Frameworks**: Spring (Boot, Web, Data Jpa, Security, OpenAPI, Validation), Thymeleaf, Kafka \
 **Development Tools**: Docker, Gradle
